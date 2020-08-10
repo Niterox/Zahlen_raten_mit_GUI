@@ -25,6 +25,7 @@ public class JavaFx extends Application {
     public static Integer textFieldNumber;
     private TextField textField;
 
+    //na c that coming
 
     public void start(Stage primaryStage) {
         root = new BorderPane();
@@ -37,17 +38,13 @@ public class JavaFx extends Application {
 
         //adds textfield
         textField = new TextField();
-        textField.setOnAction(e -> {
-            doControl();
-        });
+        textField.setOnAction(e -> doControl());
         node.getChildren().add(textField);
 
 
         //adds button
         Button button = new Button("raten");
-        button.setOnMouseClicked(e -> {
-            doControl();
-        });
+        button.setOnMouseClicked(e -> doControl());
         node.getChildren().add(button);
         node.setPrefHeight(40);
 
@@ -139,9 +136,7 @@ public class JavaFx extends Application {
         VBox vbox = new VBox(new Text(errorMessage));
         Button errorButton = new Button("OK");
         errorButton.setDefaultButton(true);
-        errorButton.setOnAction(e -> {
-            dialogStage.close();
-        });
+        errorButton.setOnAction(e -> dialogStage.close());
 
         vbox.getChildren().add(errorButton);
         vbox.setAlignment(Pos.CENTER);
