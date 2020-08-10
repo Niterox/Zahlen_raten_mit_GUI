@@ -101,6 +101,7 @@ public class JavaFx extends Application {
             try {
                 textFieldNumber = Integer.parseInt(textField.getText());
                 if (textFieldNumber < Zahl.getMin() || textFieldNumber > Zahl.getMax()) {
+                    textField.clear();
                     errorIsOutOfRange();
                 } else {
                     Zahl.usrNumber = textFieldNumber;
@@ -108,6 +109,7 @@ public class JavaFx extends Application {
                     textField.clear();
                 }
             } catch (NumberFormatException e1) {
+                textField.clear();
                 errorIsTextBlock();
             }
         }
